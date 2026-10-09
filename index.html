@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Офис Royale — кому достанется задача?</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="logo" href="./">♠ ОФИС <b>ROYALE</b></a><span class="badge">Никаких денег. Только дела.</span></header>
+<main>
+<section class="intro"><span class="eyebrow">КЛУБ РАБОЧИХ ПРИКЛЮЧЕНИЙ</span><h1>Никто не хочет?<br><em>Пусть решит удача.</em></h1><p>Четыре игры, одна задача и честный случайный выбор.<br> Соберите команду — остальное оставьте казино.</p></section>
+<div class="layout">
+<aside class="panel"><h2>Ваш стол</h2><label for="task">Что нужно сделать?</label><input id="task" maxlength="160" placeholder="Например, разобрать склад">
+<label for="names">Кто участвует?</label><p class="hint">Каждое имя с новой строки · от 2 до 30 человек</p><textarea id="names" rows="7" placeholder="Анна&#10;Максим&#10;Даша"></textarea>
+<label class="toggle"><input id="fair" type="checkbox" checked><span>Равномерное распределение<small>Выбираем среди тех, у кого меньше назначений в истории.</small></span></label><p class="hint">Участвуйте по договорённости с командой. Результат можно отменить в истории.</p></aside>
+<section class="table panel"><div class="table-top"><span class="eyebrow">ВЫБЕРИТЕ СВОЮ ИГРУ</span><span class="live">● СТОЛ ОТКРЫТ</span></div><nav class="games" aria-label="Игры"><button data-game="roulette" class="active" aria-pressed="true">◉<span>Рулетка</span></button><button data-game="slots" aria-pressed="false">▥<span>Слоты</span></button><button data-game="cards" aria-pressed="false">♠<span>Карты</span></button><button data-game="dice" aria-pressed="false">⚄<span>Кубики</span></button></nav>
+<div id="stage" class="stage"></div><div class="game-caption"><h2 id="game-title"></h2><p id="game-description"></p></div><button id="play" class="play">Испытать удачу <span>↗</span></button><p id="message" role="status" aria-live="polite">Добавьте задачу и участников, чтобы начать.</p><div id="result" class="result" hidden></div></section>
+</div>
+<section class="panel history"><div class="history-head"><div><span class="eyebrow">ВСЁ ПО-ЧЕСТНОМУ</span><h2>История назначений</h2></div><button id="clear" class="secondary">Очистить историю</button></div><div id="history"></div></section>
+<footer>Офис Royale · Случай решает, команда договаривается.<span>Данные хранятся только в этом браузере.</span></footer>
+</main><script src="app.js" defer></script>
+</body></html>
